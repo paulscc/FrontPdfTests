@@ -30,7 +30,7 @@ function Generator() {
     setStatus({ type: '', message: '' });
 
     try {
-      const response = await fetch('/api/generate-document', {
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/generate-document`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

@@ -13,7 +13,7 @@ function Documents() {
     setLoading(true);
     setError(null);
     try {
-      const response = await fetch('/api/documents');
+      const response = await fetch(`${import.meta.env.VITE_API_URL}/documents`);
       if (!response.ok) {
         throw new Error(`Error en el servidor: ${response.status}`);
       }
